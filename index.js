@@ -1,6 +1,6 @@
 require('dotenv').config();
 const User = require("./models/User"); // Import User model
-const fetch = require('node-fetch');
+
 const express = require('express');
 const path = require('path');
 const connectToDatabase = require('./config/db');
@@ -42,7 +42,7 @@ io.on('connection', (socket) => {
             if (!apiKey) {
                 throw new Error('Missing DAILY_API_KEY in environment variables');
             }
-
+            const fetch = (await import('node-fetch')).default;
             const response = await fetch('https://api.daily.co/v1/rooms', {
                 method: 'POST',
                 headers: {
@@ -97,7 +97,6 @@ app.use(cors());
 connectToDatabase();
 
 const port = process.env.PORT || 8888;
-const hostname = process.env.HOST_NAME;
 app.set('views', path.join('views'));
 app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -126,6 +125,6 @@ app.use('/booking', bookingRoutes);
 app.use('/doctor', doctorRoutes);
 app.use('/meeting', meetingRoutes);
 
-server.listen(port, hostname, () => {
+server.listen(port, '0.0.0.0', () => {
   console.log(`Example app listening on port localhost:${port}`);
 });
