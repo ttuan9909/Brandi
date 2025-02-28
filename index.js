@@ -126,6 +126,6 @@ app.use('/booking', bookingRoutes);
 app.use('/doctor', doctorRoutes);
 app.use('/meeting', meetingRoutes);
 
-server.listen(port, hostname, () => {
+server.listen(port, hostname, '0.0.0.0', () => {
   console.log(`Example app listening on port localhost:${port}`);
 });
