@@ -1,6 +1,7 @@
 const Doctor = require('../models/Doctor');
 const User = require('../models/User');  // Ensure this is correctly imported
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
+
 
 
 const getAlllist = async (req, res) => {
