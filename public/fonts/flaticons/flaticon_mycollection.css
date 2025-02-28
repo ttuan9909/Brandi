@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("flaticon25cf.ttf?ee8947506f0318bf537ad4b536a62162") format("truetype"),
+url("flaticon25cf.woff?ee8947506f0318bf537ad4b536a62162") format("woff"),
+url("flaticon25cf.woff2?ee8947506f0318bf537ad4b536a62162") format("woff2"),
+url("flaticon25cf.eot?ee8947506f0318bf537ad4b536a62162#iefix") format("embedded-opentype"),
+url("flaticon25cf.svg?ee8947506f0318bf537ad4b536a62162#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-nutrition:before {
+    content: "\f101";
+}
+.flaticon-nutrition-1:before {
+    content: "\f102";
+}
+.flaticon-healthy-food:before {
+    content: "\f103";
+}
+.flaticon-health:before {
+    content: "\f104";
+}
+.flaticon-nutrition-2:before {
+    content: "\f105";
+}
+.flaticon-nutrition-3:before {
+    content: "\f106";
+}
+.flaticon-salad:before {
+    content: "\f107";
+}
+.flaticon-medication:before {
+    content: "\f108";
+}
+.flaticon-nutrition-4:before {
+    content: "\f109";
+}
+.flaticon-protein:before {
+    content: "\f10a";
+}
+.flaticon-nutrition-5:before {
+    content: "\f10b";
+}
+.flaticon-balanced-diet:before {
+    content: "\f10c";
+}
+.flaticon-fruits:before {
+    content: "\f10d";
+}
+.flaticon-nutrition-facts-label:before {
+    content: "\f10e";
+}
+.flaticon-whey-protein:before {
+    content: "\f10f";
+}
+.flaticon-nutrition-6:before {
+    content: "\f110";
+}
+.flaticon-diet:before {
+    content: "\f111";
+}
+.flaticon-supplement:before {
+    content: "\f112";
+}
+.flaticon-pet-food:before {
+    content: "\f113";
+}
+.flaticon-apple:before {
+    content: "\f114";
+}
+.flaticon-vitamins:before {
+    content: "\f115";
+}
+.flaticon-weight-loss:before {
+    content: "\f116";
+}
+.flaticon-diet-1:before {
+    content: "\f117";
+}
+.flaticon-diet-2:before {
+    content: "\f118";
+}
+.flaticon-nutrition-7:before {
+    content: "\f119";
+}
+.flaticon-healthy-food-1:before {
+    content: "\f11a";
+}
+.flaticon-nutrition-8:before {
+    content: "\f11b";
+}
+.flaticon-nutrition-9:before {
+    content: "\f11c";
+}
+.flaticon-pour:before {
+    content: "\f11d";
+}
+.flaticon-diet-3:before {
+    content: "\f11e";
+}

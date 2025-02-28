@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nutritius - Nutrition & Health Services HTML Template</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- LOADING FONTS AND ICONS -->
+    <link rel="stylesheet" type="text/css" href="/rev/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" type="text/css" href="/rev/fonts/font-awesome/css/font-awesome.css">
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="/rev/css/rs6.css">
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="/fonts/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="/fonts/ionicons/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/fonts/flaticons/flaticon_mycollection.css">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="/css/animations.min.css">
+    <!--  Style CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!--  Responsive CSS -->
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+    <header id="pq-header" class="pq-header-default">
+        <div class="pq-top-header">
+            <div class="container">
+                <div class="row flex-row-reverse">
+                    <div class="col-md-6 text-right">
+                        <div class="pq-header-social text-right">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li>
+                                   
+                                    <% if (user) { %>
+                                        <a>  <i class="fa-solid fa-user " style="padding-right: 12px;"></i><span><%= user ? user.name : "Guest" %>!</span>
+                                        </a>
+                                        <a href="/auth/logout"><i class="fa-solid fa-right-from-bracket " ></i></a>
+    
+                                    <% } %>
+                                  </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pq-header-contact ">
+                            <ul>
+                                <li>
+                                    <a href="tel:1800001658"><i class="fas fa-phone"></i>
+                                        <span>1800-001-658</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:Info@Peacefulthemes.com"><i
+                                            class="fas fa-envelope"></i><span>Brandi2024@gmail.com</span></a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pq-bottom-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <a class="navbar-brand">
+                                <img class="img-fluid logo" src="/images/logon.png" alt="nutritius">
+                            </a>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <div id="pq-menu-contain" class="pq-menu-contain">
+                                    <ul id="pq-main-menu" class="navbar-nav ml-auto">
+                                        <li class="menu-item current-menu-item">
+                                            <a href="/">Home</a>            
+                                        </li>
+                                        <li class="menu-item ">
+                                            <a href="#">Pages</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item "><a href="about-us.html">About us</a></li>                                                                                          
+                                                <li class="menu-item "><a href="classes.html">Classes</a></li>
+                                                <li class="menu-item "><a href="appointment.html">Appointment</a></li>
+                                                <li class="menu-item "><a href="our-team.html">Our Team</a></li>                                
+                                            </ul>
+                                        </li>
+                                        
+                                        <li class="menu-item ">
+                                            <a href="/doctor/doctoruser">Doctors</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Tâm lí</a><i
+                                                        class="fa fa-chevron-down pq-submenu-icon"></i>
+    
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Dinh dưỡng</a><i
+                                                        class="fa fa-chevron-down pq-submenu-icon"></i>
+    
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Sức khỏe</a><i
+                                                        class="fa fa-chevron-down pq-submenu-icon"></i>
+    
+                                                </li>
+    
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item ">
+                                            <a href="#">Blog</a><i class="fa fa-chevron-down pq-submenu-icon"></i>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Grid Style</a><i
+                                                        class="fa fa-chevron-down pq-submenu-icon"></i>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item "><a href="1-column-blog.html">1 column
+                                                                blog</a></li>
+                                                        <li class="menu-item "><a href="2-column-blog.html">2 Column
+                                                                Blog</a></li>
+                                                        <li class="menu-item "><a href="3-column-blog.html">3 Column
+                                                                Blog</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item-has-children">
+                                                    <a href="#">Blog sidebar</a><i
+                                                        class="fa fa-chevron-down pq-submenu-icon"></i>
+                                                    <ul class="sub-menu">
+                                                        <li class="menu-item "><a href="left-sidebar.html">left
+                                                                sidebar</a></li>
+                                                        <li class="menu-item "><a href="right-sidebar.html">Right
+                                                                Sidebar</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item "><a href="single-blog.html">single blog</a>
+                                                </li>
+                                                
+                                            </ul>   
+                                        </li>
+                                        <% if (user) { %>
+                                        <li class="menu-item "><a href="/booking/booked/user/<%= user._id  %>">Appointmented</a>
+                                        </li> <% }%>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="pq-menu-search-block">
+                                <a href="javascript:void(0)" id="pq-seacrh-btn"><i class="ti-search"></i></a>
+                                <div class="pq-search-form">
+                                    <form role="search" method="get" class="search-form">
+                                        <label>
+                                            <span class="screen-reader-text">Search for:</span>
+                                            <input type="search" class="search-field" placeholder="Search …" value=""
+                                                name="s">
+                                        </label>
+                                        <button type="submit" class="search-submit"><span
+                                                class="screen-reader-text">Search</span></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="pq-button-container m-0">
+                            
+    
+                                <a class="pq-button pq-btn-flat" href="/booking/formbooking">
+                                    <span class="pq-btn-text">
+                                        <img src="/images/btn-img.svg" alt="svg-image">Appointment
+                                    </span>
+                                    <div class="pq-btn-cover">
+                                        <span class="pq-btn-text pq-btn-cover-text">
+                                            <img src="/images/btn-img.svg" alt="svg-image">Appointment
+                                        </span>
+                                        <span></span>
+                                        <div class="pq-btn-cover-bgrnd">
+                                            
+                                        </div>
+                                    </div>
+                                </a>
+                                <% if (!user) { %>
+                                    <a class="pq-button pq-btn-flat" href="/auth/formlogin">
+                                        <span class="pq-btn-text">
+                                            <img src="/images/btn-img.svg" alt="svg-image"> Login
+                                        </span>
+                                        <div class="pq-btn-cover">
+                                            <span class="pq-btn-text pq-btn-cover-text">
+                                                <img src="/images/btn-img.svg" alt="svg-image"> Login
+                                            </span>
+                                            <div class="pq-btn-cover-bgrnd"></div>
+                                        </div>
+                                    </a>
+                              <% } %>
+                                 
+                                
+                                
+                            </div>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-bars"></i>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <h2 class="text-center">Booked Appointments</h2>
+
+        
+
+        <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Patient Name</th>
+                    <th>Doctor Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Appointment Date</th>
+                    <th>Time</th>
+                    <th>Note</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (bookings.length > 0) { %>
+                    <% bookings.forEach((booking, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= booking.patientName %></td>
+                            <td><%= booking.doctorId && booking.doctorId.name ? booking.doctorId.name : 'N/A' %></td>
+                            <td><%= booking.phone %></td>
+                            <td><%= booking.email %></td>
+                            <td><%= booking.appointmentDate.toISOString().split('T')[0] %></td>
+                            <td><%= booking.time %></td>
+                            <td><%= booking.note || 'No note' %></td>
+                            <td>
+                               
+                                    <a href="/meeting/meetings/" class="btn btn-success">Call</a>
+                                
+                            </td>
+                        </tr>
+                    <% }); %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="9" class="text-center">No appointments booked.</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <a href="/booking/formbooking" class="btn btn-primary">Book Another Appointment</a>
+        <a href="/" class="btn btn-primary">Home</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <!--bootstrap js-->
+    <script src="/js/bootstrap.min.js"></script>
+    <!--owl-carousal-->
+    <script src="/js/owl.carousel.min.js"></script>
+    <!--progress-bar js-->
+    <script src="/js/progressbar.js"></script>
+    <!--countTo js-->
+    <script src="/js/jquery.countTo.min.js"></script>
+    <!-- wow js -->
+    <script src="/js/wow.min.js"></script>
+    <!--Maginfic-Popup js-->
+    <script src="/js/jquery.magnific-popup.min.js"></script>
+    <!-- Rev-Slider -->
+    <script src="/rev/js/rbtools.min.js"></script>
+    <script src="/rev/js/rs6.min.js"></script>
+    <script src="/js/rev-custom.js"></script>
+    <!-- <isotope js> -->
+    <script src="/js/isotope.pkgd.min.js"></script>
+    <!--custom js-->
+    <script src="/js/custom.js"></script>
+</body>
+</html>

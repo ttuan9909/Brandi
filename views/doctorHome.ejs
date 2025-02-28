@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Home</title>
+    <link rel="stylesheet" href="path_to_your_css">
+</head>
+<body>
+    <div class="container">
+        
+        <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Patient Name</th>
+                    <th>Doctor Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Appointment Date</th>
+                    <th>Time</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (bookings.length > 0) { %>
+                    <% bookings.forEach((booking, index) => { %>
+                        <tr>
+                            <td><%= index + 1 %></td>
+                            <td><%= booking.patientName %></td>
+                            <td><%= booking.doctorId.name  %></td> <!-- Access doctorId's name -->
+                            <td><%= booking.phone %></td>
+                            <td><%= booking.email %></td>
+                            <td><%= booking.appointmentDate.toISOString().split('T')[0] %></td>
+                            <td><%= booking.time %></td>
+                            <td><%= booking.note || 'No note' %></td>
+                        </tr>
+                    <% }); %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="8" class="text-center">No appointments booked.</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+</body>
+</html>

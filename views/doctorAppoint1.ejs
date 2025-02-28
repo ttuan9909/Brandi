@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .table {
+            text-align: center;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .table th {
+            background-color: #2c7d59;
+            color: white;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>List of Appointment</h2>
+
+    <!-- Button Create Doctor -->
+    <div class="btn-custom">
+        <a href="/admin" class="btn btn-secondary"><i class="fa fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <table class="table table-bordered mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Patient Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Appointment Date</th>
+                <th>Time</th>
+                <th>Note</th>
+                <th>Action</th> <!-- Added Action Column -->
+            </tr>
+        </thead>
+        <tbody>
+            <% if (bookings.length > 0) { %>
+                <% bookings.forEach((booking, index) => { %>
+                    <tr>
+                        <td><%= index + 1 %></td>
+                        <td><%= booking.patientName %></td>
+                        <td><%= booking.phone %></td>
+                        <td><%= booking.email %></td>
+                        <td><%= booking.appointmentDate.toISOString().split('T')[0] %></td>
+                        <td><%= booking.time %></td>
+                        <td><%= booking.note || 'No note' %></td>
+                        <td>
+                            <a href="tel:<%= booking.phone %>" class="btn btn-success">
+                                <i class="fa fa-phone"></i> Call
+                            </a>
+                        </td>
+                    </tr>
+                <% }); %>
+            <% } else { %>
+                <tr>
+                    <td colspan="8" class="text-center">No appointments booked.</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

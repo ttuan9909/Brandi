@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo Sát Sức Khỏe Tâm Lý & Dinh Dưỡng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 200px;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+</style>
+<body>
+
+    <div class="container">
+        <h2>Khảo Sát Sức Khỏe Tâm Lý & Dinh Dưỡng</h2>
+        <p>Vui lòng điền vào biểu mẫu dưới đây để nhận tư vấn phù hợp.</p>
+
+        <form action="/submit-survey" method="POST">
+            <h3>1. Thông Tin Cá Nhân</h3>
+            <label>Họ và Tên:</label>
+            <input type="text" name="name" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <label>Tuổi:</label>
+            <input type="number" name="age" required>
+
+            <h3>2. Sức Khỏe Tâm Lý</h3>
+            <label>Bạn có cảm thấy căng thẳng thường xuyên không?</label>
+            <select name="stress_level" required>
+                <option value="low">Ít</option>
+                <option value="medium">Trung bình</option>
+                <option value="high">Cao</option>
+            </select>
+
+            <label>Bạn có gặp khó khăn khi ngủ không?</label>
+            <select name="sleep_problem" required>
+                <option value="no">Không</option>
+                <option value="sometimes">Thỉnh thoảng</option>
+                <option value="yes">Có</option>
+            </select>
+
+            <label>Bạn có thường cảm thấy buồn hoặc chán nản không?</label>
+            <select name="depression" required>
+                <option value="no">Không</option>
+                <option value="sometimes">Thỉnh thoảng</option>
+                <option value="yes">Có</option>
+            </select>
+
+            <h3>3. Chế Độ Dinh Dưỡng</h3>
+            <label>Bạn có thường xuyên ăn đủ 3 bữa/ngày không?</label>
+            <select name="meals_per_day" required>
+                <option value="yes">Có</option>
+                <option value="no">Không</option>
+            </select>
+
+            <label>Bạn uống bao nhiêu nước mỗi ngày?</label>
+            <select name="water_intake" required>
+                <option value="less1l">Dưới 1L</option>
+                <option value="1-2l">1-2L</option>
+                <option value="more2l">Trên 2L</option>
+            </select>
+
+            <label>Bạn có thường xuyên ăn rau và trái cây không?</label>
+            <select name="vegetable_fruit" required>
+                <option value="always">Luôn luôn</option>
+                <option value="sometimes">Thỉnh thoảng</option>
+                <option value="rarely">Hiếm khi</option>
+            </select>
+
+            <button type="submit">Gửi Khảo Sát</button>
+        </form>
+    </div>
+
+</body>
+</html>
