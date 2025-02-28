@@ -125,6 +125,10 @@ app.use('/booking', bookingRoutes);
 app.use('/doctor', doctorRoutes);
 app.use('/meeting', meetingRoutes);
 
+<<<<<<< HEAD
 server.listen(port, '0.0.0.0', () => {
+=======
+server.listen(port, hostname, '0.0.0.0', () => {
+>>>>>>> 76b278d8949e035c2012270bdf94464785a6ef55
   console.log(`Example app listening on port localhost:${port}`);
 });
