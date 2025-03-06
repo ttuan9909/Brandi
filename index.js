@@ -12,6 +12,7 @@ const bookingRoutes = require('./routes/booking');
 const doctorRoutes = require('./routes/doctor');
 const adminRoutes = require('./routes/admin');
 const homeRoutes = require('./routes/home');
+const surveyRoutes = require('./routes/survey');
 const meetingRoutes = require('./routes/meeting');
 const cors = require('cors');
 
@@ -124,6 +125,7 @@ app.use('/admin', adminRoutes);
 app.use('/booking', bookingRoutes);
 app.use('/doctor', doctorRoutes);
 app.use('/meeting', meetingRoutes);
+app.use('/survey', surveyRoutes);
 
 
 server.listen(port, '0.0.0.0', () => {
